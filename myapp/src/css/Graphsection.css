@@ -13,7 +13,7 @@
   }
   
   .tab-buttons button.active {
-    background-color: grey; /* Color for active tab */
+    background-color: grey; 
     color: white;
   }
   
@@ -24,4 +24,6 @@
     background-color: #f9f9f9;
     width: 700px;
   }
+  
+
   

@@ -1,10 +1,34 @@
-import React,{useState} from 'react'
-import '../css/Graphsection.css'
+import React, { useState } from 'react';
+import data from './graphData.json'; 
+import '../css/Graphsection.css';
 
 const GraphSectionh2 = () => {
-    const [activeTab, setActiveTab] = useState('home'); // State to track active tab
+  const [activeTab, setActiveTab] = useState('home'); 
+
+  const renderTable = (rows) => (
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, index) => (
+          <tr key={index}>
+            <td>{row.name}</td>
+            <td>{row.value}</td>
+            <td>{row.percentage}%</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+
   return (
-    <div>
+    <div className="graph-section-container">
+      {/* Buttons for Tabs */}
       <div className="tab-buttons">
         <button
           onClick={() => setActiveTab('home')}
@@ -22,26 +46,45 @@ const GraphSectionh2 = () => {
           onClick={() => setActiveTab('services')}
           className={activeTab === 'services' ? 'active' : ''}
         >
-          Most active by volume
+          Most Active by Volume
         </button>
         <button
           onClick={() => setActiveTab('contact')}
           className={activeTab === 'contact' ? 'active' : ''}
         >
-          Good for beginner
+          Good for Beginner
         </button>
       </div>
 
-      {/* Content Based on Active Tab */}
+      {/* Content for Active Tab */}
       <div className="tab-content">
-        {activeTab === 'home' && <div>Welcome to the Home Page</div>}
-        {activeTab === 'about' && <div>Learn more About Us</div>}
-        {activeTab === 'services' && <div>Check out our Services</div>}
-        {activeTab === 'contact' && <div>Get in Touch through our Contact Page</div>}
+        {activeTab === 'home' && (
+          <div className="scrollable-content">
+            <h3>Top Gainers</h3>
+            {renderTable(data.gainers)}
+          </div>
+        )}
+        {activeTab === 'about' && (
+          <div className="scrollable-content">
+            <h3>Top Losers</h3>
+            {renderTable(data.losers)}
+          </div>
+        )}
+        {activeTab === 'services' && (
+          <div className="scrollable-content">
+            <h3>Most Active by Volume</h3>
+            {renderTable(data.mostActive)}
+          </div>
+        )}
+        {activeTab === 'contact' && (
+          <div className="scrollable-content">
+            <h3>Good for Beginners</h3>
+            {renderTable(data.goodForBeginners)}
+          </div>
+        )}
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default GraphSectionh2
+export default GraphSectionh2;

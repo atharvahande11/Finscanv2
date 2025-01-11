@@ -1,0 +1,23 @@
+{
+  "gainers": [
+    { "name": "Stock A", "value": 100, "percentage": 5.5 },
+    { "name": "Stock B", "value": 150, "percentage": 6.3 }
+  ],
+  "losers": [
+    { "name": "Stock C", "value": 80, "percentage": -3.2 },
+    { "name": "Stock D", "value": 90, "percentage": -2.8 }
+  ],
+  "mostActive": [
+    { "name": "Stock E", "value": 200, "percentage": 4.8 },
+    { "name": "Stock F", "value": 250, "percentage": 5.1 }
+  ],
+  "goodForBeginners": [
+    { "name": "Stock G", "value": 110, "percentage": 3.1 },
+    { "name": "Stock H", "value": 120, "percentage": 2.9 },
+    { "name": "Stock H", "value": 120, "percentage": 2.9 },
+    { "name": "Stock H", "value": 120, "percentage": 2.9 },
+    { "name": "Stock H", "value": 120, "percentage": 2.9 },
+    { "name": "Stock H", "value": 120, "percentage": 2.9 },
+    { "name": "Stock H", "value": 120, "percentage": 2.9 }
+  ]
+}
