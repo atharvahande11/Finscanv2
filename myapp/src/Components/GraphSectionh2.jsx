@@ -6,10 +6,30 @@ const GraphSectionh2 = () => {
   return (
     <div>
       <div className="tab-buttons">
-        <button onClick={() => setActiveTab('home')}>Home</button>
-        <button onClick={() => setActiveTab('about')}>About</button>
-        <button onClick={() => setActiveTab('services')}>Services</button>
-        <button onClick={() => setActiveTab('contact')}>Contact</button>
+        <button
+          onClick={() => setActiveTab('home')}
+          className={activeTab === 'home' ? 'active' : ''}
+        >
+          Top Gainer
+        </button>
+        <button
+          onClick={() => setActiveTab('about')}
+          className={activeTab === 'about' ? 'active' : ''}
+        >
+          Top Loser
+        </button>
+        <button
+          onClick={() => setActiveTab('services')}
+          className={activeTab === 'services' ? 'active' : ''}
+        >
+          Most active by volume
+        </button>
+        <button
+          onClick={() => setActiveTab('contact')}
+          className={activeTab === 'contact' ? 'active' : ''}
+        >
+          Good for beginner
+        </button>
       </div>
 
       {/* Content Based on Active Tab */}
