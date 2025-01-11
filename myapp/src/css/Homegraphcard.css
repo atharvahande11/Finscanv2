@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.cardmain{
+    padding: 10px 20px;
+    border: 1px solid grey;
+    width: 190px;
+    background-color: white;
+}
+
+p:nth-child(1){
+    font-size: 13px;
+    font-weight: bold;
+}   

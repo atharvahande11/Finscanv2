@@ -9,7 +9,7 @@ import Navbar from  './Components/Navbar'
 import Home from './Components/Home'
 import Trade from './Components/Trade'
 import Regulation from './Components/Regulation'
-import {Route,Routes} from 'react-router-dom'
+import {Route,Routes,Navigate} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +19,7 @@ function App() {
       <Navbar />
       <div className="container">
         <Routes>
+          <Route path="/" element={<Navigate to ="/home" />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/list" element={<List />} />

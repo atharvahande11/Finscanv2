@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.cardhead{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 30px 10px; 
+    background-color: rgb(212, 209, 209);
+}
+
