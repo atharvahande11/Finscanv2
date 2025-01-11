@@ -1,0 +1,26 @@
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(212, 209, 209);
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .tab-buttons button:hover {
+    background-color: grey;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
